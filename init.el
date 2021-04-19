@@ -116,3 +116,6 @@
 ;; Change the useful keys in useful ones
 (global-set-key (kbd "£") (kbd "~"))
 (global-set-key (kbd "§") (kbd "`"))
+
+;; Change font dimension
+(set-face-attribute 'default nil :height 150)
