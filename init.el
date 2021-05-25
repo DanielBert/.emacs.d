@@ -28,7 +28,7 @@
     py-autopep8                     ;; Run autopep8 on save
     blacken                         ;; Black formatting on save
     magit                           ;; Git integration
-    melancholy-theme)               ;; Melancholy-theme
+    moe-theme)
   )
 
 ;; Scans the list in myPackages
@@ -43,8 +43,11 @@
 ;; ====================================
 
 (setq inhibit-startup-message t)  ;; Hide the startup message
-(load-theme 'melancholy t)        ;; Load theme
 (global-linum-mode t)             ;; Enable line numbers globally
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/moe-theme.el")
+
+(load-theme 'moe-dark t);; Show highlighted buffer-id as decoration. (Default: nil)
 
 ;; ====================================
 ;; DEVELOPMENT SETUP
@@ -75,7 +78,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(material-theme magit blacken py-autopep8 flycheck ein elpy better-defaults)))
+   '(magit blacken py-autopep8 flycheck ein elpy better-defaults)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
